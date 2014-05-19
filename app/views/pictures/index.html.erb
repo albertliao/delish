@@ -1,0 +1,5 @@
+<% @pictures.each do |p| %>
+	<h1><%=p.title%></h1>
+	<%= image_tag p.image.url, size: "800x600" %> <br />
+	<h3>Category: <%=p.category%></h3>
+<% end %>

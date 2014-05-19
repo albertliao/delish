@@ -1,0 +1,11 @@
+<h1> Delish or NOT? </h1>
+
+<%= form_for @vote do |f| %>
+  Score: <%= f.number_field :score %>
+  <%= f.submit "Submit" %>
+<% end %>
+
+<% @pictures.each do |p| %>
+	<%= image_tag p.image.url, size: "800x600" %> <br />
+<% end -%>
+

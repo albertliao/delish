@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Delish</title>
+  <%= stylesheet_link_tag    'application' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<%= render partial: "layouts/nav" %>
+	<div class="container-fluid main span12">
+		<%= yield %>
+	</div>
+</body>
+</html>
