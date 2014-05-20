@@ -2,8 +2,8 @@
 
 <%= form_for @vote do |f| %>
   Score: <%= f.number_field :score %>
-  <%= f.hidden_field :user, value: @user.id %>
-  <%= f.hidden_field :picture, value: @picture.id %>
+  <%= f.hidden_field :user, value: @user %>
+  <%= f.hidden_field :picture, value: @pictureid %>
   <%= f.submit "Submit" %>
 <% end %>
 <br />

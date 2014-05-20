@@ -2,14 +2,16 @@ class VotesController < ApplicationController
   before_action :authenticate_user
 
   def index
+  	@votes = Vote.all
   end
 
   def new
   	pic_count = Picture.all.count
   	rand = rand(pic_count)
   	@picture = Picture.skip(rand).limit(1).first
+  	@pictureid = @picture.id
   	@vote = Vote.new
-  	@user = current_user
+  	@user = current_user.id
   end
 
   def create

@@ -1,2 +1,8 @@
 <h1>Votes#index</h1>
 <p>Find me in app/views/votes/index.html.erb</p>
+
+<% @votes.each do |v| %>
+	<h1>Score: <%=v.score%></h1>
+	<h3>User: <%=v.user.name%></h3>
+	<%= image_tag v.picture.image.url, size: "800x600" %> <br />
+<% end %>

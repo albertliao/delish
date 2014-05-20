@@ -4,7 +4,6 @@ gem 'mongoid', github: 'mongoid/mongoid'
 gem 'bootstrap-sass', '~> 3.1.1'
 gem "mongoid-paperclip", "~> 0.0.8", :require => "mongoid_paperclip"
 gem 'aws-sdk', '~> 1.3.4'
-gem 'rails_12factor'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
@@ -40,3 +39,5 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
+
+gem 'rails_12factor'
