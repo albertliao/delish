@@ -13,6 +13,8 @@ class VotesController < ApplicationController
   		@pictureid = @picture.id
   		@vote = Vote.new
   		@user = current_user.id
+  	else
+  		redirect_to new_picture_path
   	end
   end
 
