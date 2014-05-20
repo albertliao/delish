@@ -4,6 +4,7 @@ gem 'mongoid', github: 'mongoid/mongoid'
 gem 'bootstrap-sass', '~> 3.1.1'
 gem "mongoid-paperclip", "~> 0.0.8", :require => "mongoid_paperclip"
 gem 'aws-sdk', '~> 1.3.4'
+gem 'rails_12factor'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'

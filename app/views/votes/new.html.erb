@@ -2,10 +2,12 @@
 
 <%= form_for @vote do |f| %>
   Score: <%= f.number_field :score %>
+  <%= f.hidden_field :user, value: @user.id %>
+  <%= f.hidden_field :picture, value: @picture.id %>
   <%= f.submit "Submit" %>
 <% end %>
+<br />
 
-<% @pictures.each do |p| %>
-	<%= image_tag p.image.url, size: "800x600" %> <br />
-<% end -%>
+<%= image_tag @picture.image.url, size: "800x600" %> <br />
+
 
