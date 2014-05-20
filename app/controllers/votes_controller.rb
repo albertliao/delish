@@ -7,11 +7,13 @@ class VotesController < ApplicationController
 
   def new
   	pic_count = Picture.all.count
-  	rand = rand(pic_count)
-  	@picture = Picture.skip(rand).limit(1).first
-  	@pictureid = @picture.id
-  	@vote = Vote.new
-  	@user = current_user.id
+  	if pic_count > 0
+  		rand = rand(pic_count)
+  		@picture = Picture.skip(rand).limit(1).first
+  		@pictureid = @picture.id
+  		@vote = Vote.new
+  		@user = current_user.id
+  	end
   end
 
   def create
