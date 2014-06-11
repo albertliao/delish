@@ -2,7 +2,7 @@ class VotesController < ApplicationController
   before_action :authenticate_user
 
   def index
-  	@votes = Vote.all
+  	@votes = Vote.where(user_id:current_user)
   end
 
   def new
@@ -21,7 +21,7 @@ class VotesController < ApplicationController
   def create
   	@vote = Vote.new(params.require(:vote).permit(:score, :user, :picture))
   	if @vote.save
-  		redirect_to votes_path
+  		redirect_to pictures_path
   	else
   		render 'new'
   	end

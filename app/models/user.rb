@@ -15,6 +15,8 @@ class User
 
   has_many :votes
 
+  has_many :pictures
+
   def password
     @password
   end

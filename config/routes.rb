@@ -1,18 +1,13 @@
 Rails.application.routes.draw do
-  resources :pictures do
-    resources :votes
-  end
+  resources :pictures, only: [:index, :new, :create, :destroy]
 
-  resources :users do
-    resources :votes
-  end
+  resources :users
 
-  resources :votes
+  resources :votes, only: [:index, :new, :create, :destroy]
 
   resource :sessions, only: [:new, :create, :destroy]
 
   root 'votes#new'
-
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

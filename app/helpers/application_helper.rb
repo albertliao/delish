@@ -10,4 +10,12 @@ module ApplicationHelper
     end
   end
 
+  def average_score(picture)
+    if picture.votes.count > 0
+    	picture.votes.avg(:score).round(2)
+    else
+      "N/A"
+    end
+  end
+
 end

@@ -11,12 +11,13 @@ class Picture
 
   has_one :restaurant
 
+  belongs_to :user
+
   has_many :votes
 
   has_mongoid_attached_file :image
 
   validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
-
 
 end
 

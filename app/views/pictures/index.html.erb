@@ -1,5 +1,8 @@
+<h1>My Pictures</h1>
+
 <% @pictures.each do |p| %>
 	<h1><%=p.title%></h1>
+	<h2>Avg Score:<%= average_score(p) %></h2>
 	<%= image_tag p.image.url, size: "800x600" %> <br />
 	<h3>Category: <%=p.category%></h3>
 <% end %>
